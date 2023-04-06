@@ -1,0 +1,55 @@
+@use "vars";
+
+.Menu {
+    position: absolute;
+    top: 6rem;
+    right: 6rem;
+    background: vars.$white;
+    width: 10rem;
+    height: auto;
+    border: 0.1rem solid vars.$very-light-pink;
+    border-bottom-left-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+
+    /*Top, right, bottom, left*/
+    padding: 2rem 2rem 0 2rem;
+}
+
+.Menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Menu ul li{
+    text-align: end;
+}
+
+/*Todos MENOS el último hijo*/
+.Menu ul li:not(:last-child){
+    font-weight: bold;
+    font-size: vars.$med-font;
+}
+
+.Menu ul li a{
+    color:vars.$black;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.Menu ul li:last-child{
+    padding-top: 2rem;
+    border-top:  0.1rem solid vars.$very-light-pink;
+}
+
+.Menu ul li:last-child a{
+    color: vars.$hospital-green;
+    font-size: vars.$small-font;
+}
+
+@media (max-width: 640px) {
+    .Menu {
+        display: none;
+    }
+}

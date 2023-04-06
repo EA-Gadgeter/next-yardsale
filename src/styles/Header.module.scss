@@ -1,0 +1,127 @@
+@use "vars";
+
+.Nav {
+    // Tenemos que restarle 4.8rem para "contrarrestar" el padding horitzontal de 2.4rem
+    width: calc(100% - 4.8rem);
+    /*Usamos flex para separar la parte izquierda y parte
+    derecha de la barra de navegación horizontalmente*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.4rem;
+    border-bottom: 0.1rem solid vars.$very-light-pink;
+    top: 0;
+	position: fixed;
+    background-color: #FFF;
+}
+
+/*La imagen del toogle del menu es algo solo de mobile, por lo que por defecto
+la desactivamos para desktop*/
+.menu {
+    display: none;
+}
+
+/*Si solo especificamos el width o height de una imagen, el otro se ajustara automaticamente
+para evitar estiramiento o que la imagen se vea pixelada*/
+/*Si no agregamos estos, por alguna razón el lado izquierda no pasa a estar
+de manera horizontal*/
+.nav-bar-left {
+    display: flex;
+    align-items: center ;
+}
+
+/*Quitamos todas las decoraciones y estilos que agrega el usar listas*/
+.nav-bar-left ul, .nav-bar-right ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    /*Centramos los elementos de manera vertical y le damos una altura a ambas
+    partes de la barra de navegación, esto le dara de manera indirecta, una altura
+    a la barra de navegación
+    
+    En este sentido da un mejor resultado que darle una altura a <nav> directamente,
+    ya que de esa manera la imagen del menu tratara de ajustarse a esta altura
+    logrando que quede desproporcionada*/
+    display: flex;
+    align-items: center;
+    height: 6rem;
+}
+
+.nav-bar-left ul{
+    font-size: vars.$med-font;
+}
+
+.nav-bar-left ul li:first-of-type{
+    margin-left: 1.2rem;
+}
+
+/*Quitamos todas las decoraciones que agregan la etiqueta <a> y dames los estilos necesarios*/
+.nav-bar-left ul li a {
+    text-decoration: none;
+    color: vars.$very-light-pink;
+    border: 1px solid vars.$white;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+}
+
+/*Al pasar el cursos por encima de una de las opciones del menu, esta
+adquiere un color verde en el texto y el borde*/
+.nav-bar-left ul li a:hover{
+    border-color: vars.$hospital-green;
+    color: vars.$hospital-green;
+}
+
+.nav-bar-email {
+    color: vars.$black;
+    font-size: vars.$small-font;
+    margin-right: 1.2rem;
+
+    cursor: pointer;
+}
+
+.nav-bar-email:hover {
+    color: vars.$hospital-green;
+}
+
+/*Este sera el contenedor PADRE con posición relativa que nos
+permitira ubicar el circulo con la cantidad de productos en el
+carrito*/
+.nav-shopping-cart {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-shopping-cart div {
+    /*Creamos el circulo de colo verde*/
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: vars.$hospital-green;
+    border-radius: 50%;
+    font-size: vars.$small-font;
+    font-weight: bold;
+
+    /*Este sera el contenedor con posición absoluta, usamos top y right
+    para colocar el circulo en su lugar, centramos el número dentro
+    del circulo con GRID*/
+    position: absolute;
+    top: -0.6rem;
+    right: -0.3rem;
+    display: grid;
+    place-items: center;
+}
+
+@media (max-width: 640px) {
+    .menu {
+        display: block;
+        position: relative;
+    }
+
+    .nav-bar-left ul{
+        display: none;
+    }
+
+    .nav-bar-email {
+        display: none;
+    }
+}

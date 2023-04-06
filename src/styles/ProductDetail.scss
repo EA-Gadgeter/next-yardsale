@@ -1,0 +1,37 @@
+@use "./vars";
+
+.ProductDetail {
+    width: 36rem;
+    padding-bottom: 2.4rem;
+
+    /*Ya que en desktop estos es un aside, usamos position absolute
+    para ponerlo hasta la derecha*/
+    position: absolute;
+    right: 0;
+}
+
+/*Creamos el boton de blanco redondo y usamos position absoluto para pocionarlo
+en la esquina superior izquierda*/
+.ProductDetail .product-detailed-close {
+    background: var(--white);
+    width: 1.4rem;
+    height: 1.4rem;
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    padding: 1.2rem;
+    border-radius: 50%;
+}
+
+.ProductDetail .product-detailed-close:hover {
+    cursor: pointer;
+}
+
+/*La imagen abarcara todo el ancho del contenedor
+y usamos le damos border solo en la partde de abajo*/
+.ProductDetail > img:nth-child(2) {
+    width: 100%;
+    height: 36rem;
+    border-radius: 0 0 2rem 2rem;
+    object-fit: cover;
+}

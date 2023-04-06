@@ -1,0 +1,84 @@
+@use "vars";
+
+@keyframes swipeRight {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: calc(100% - 4.8rem);
+    }
+
+}
+
+.MobileMenu {
+    background-color: vars.$white;
+    padding: 2.4rem;
+    position: fixed;
+    top: 6.1rem; // Lo que evita que encime con la NavBar
+    left: 0;
+    width: calc(100% - 4.8rem);
+    height: 100vh;
+    animation: swipeRight 0.26s ease;
+}
+
+.MobileMenu ul{
+    padding: 0;
+    margin: 2.4rem 0 0;
+    list-style: none;
+}
+
+.MobileMenu ul:nth-child(1) {
+    border-bottom: 0.1rem solid vars.$very-light-pink;
+}
+
+.MobileMenu ul:nth-child(1) li:first-child a{
+    cursor: default;
+}
+
+.MobileMenu ul li:last-child {
+    margin-bottom: 5rem;
+}
+
+.MobileMenu ul:nth-child(2) li:first-child {
+    margin-top: 5rem;
+}
+
+.MobileMenu ul li{
+    margin-bottom: 2.4rem;
+}
+
+.MobileMenu a{
+    text-decoration: none;
+    color: vars.$black;
+    font-weight: bold;
+    font-size: vars.$med-font;
+}
+
+.MobileMenu p {
+    font-size: vars.$small-font;
+}
+
+.MobileMenu .email {
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.MobileMenu .sign-out {
+    color: vars.$hospital-green;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.MobileMenu div {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5rem;
+}
+
+
+@media (min-width: 641px) {
+    .MobileMenu {
+        display: none;
+    }
+}

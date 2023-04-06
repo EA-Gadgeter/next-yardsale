@@ -1,0 +1,47 @@
+@use "./vars";
+
+.ProductInfo {
+    margin: 2.4rem 2.4rem 0 2.4rem;
+}
+
+/*Damos estilo a los 3 textos con pseudoclases*/
+.ProductInfo p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--med-font);
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+}
+
+.ProductInfo p:nth-child(2) {
+    color:var(--very-light-pink); 
+    font-size: var(--med-font);
+    margin-top: 0;
+    margin-bottom: 3.6rem;
+}
+
+.ProductInfo p:nth-child(3) {
+    color:var(--very-light-pink);
+    font-size: var(--small-font);
+    margin-top: 0;
+    margin-bottom: 3.6rem;
+}
+
+.ProductInfo .primary-button {
+    background-color: var(--hospital-green);
+    border-radius: 0.8rem;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--med-font);
+    font-family: 'Quicksand', sans-serif;
+    height: 5rem;
+}
+
+/*Usamos FLEXBOX para centrar el contenido del boton*/
+.ProductInfo .add-to-cart-button {
+    /*Si lo hacemos con GRID, nos lo pone vertical*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

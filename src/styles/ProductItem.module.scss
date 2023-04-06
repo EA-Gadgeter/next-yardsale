@@ -1,0 +1,72 @@
+@use "vars";
+
+.ProductItem {
+    /*Tamaño de cada producto*/
+    width: 24rem;
+}
+
+.ProductItem img {
+    width: 100%;
+    height: 24rem;
+    border-radius: 2rem;
+
+    /*Esta propiedad hace que la imagen se adecue al
+    tamaño dado, para no verse estirada o pixelada*/
+    object-fit: cover;
+}
+
+.ProductItem .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+/*Por defecto la etiqueta figure tiene un margin, se lo quitamos
+para evitar problemas*/
+.ProductItem .product-info figure {
+    margin: 0;
+}
+
+.ProductItem .product-info figure img {
+    width: 4rem;
+    height: 4rem;
+
+    box-shadow: 0 0 3px 0.5px vars.$very-light-pink;
+
+    cursor: pointer;
+}
+
+.ProductItem .product-info figure:hover img {
+    border-radius: 50%;
+    box-shadow: 0 0 2px 1px vars.$hospital-green,
+    0 0 4px 1px vars.$hospital-green,
+    0 0 8px 1px vars.$hospital-green;
+}
+
+/*El primer párrafo dentro de un div*/
+.ProductItem .product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: vars.$med-font;
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+}
+
+.ProductItem .product-info div p:nth-child(2) {
+    font-size: vars.$small-font;
+    color: vars.$very-light-pink;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (max-width: 640px){
+
+    .ProductItem {
+        /*Tamaño de cada producto*/
+        width: 14rem;
+    }
+    
+    .ProductItem img {
+        height: 14rem;
+    }
+}

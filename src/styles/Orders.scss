@@ -1,0 +1,27 @@
+@use "./vars";
+
+.Orders {
+    width: 100%;
+    height: calc(100vh - 6.1rem);
+    display: grid;
+    place-items: center;
+}
+
+.Orders .my-orders-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    /* Ancho del contenedor centrado */
+    width: 30rem;
+}
+
+.Orders .my-orders-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.Orders .title {
+    font-size: var(--large-font);
+    font-weight: bold;
+    margin-bottom: 4rem;
+}

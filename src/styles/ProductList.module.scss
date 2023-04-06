@@ -1,0 +1,26 @@
+
+.ProductList .cards-container {
+    display: grid;
+    /*Con la siguiente linea hacemos que el GRID
+    se repita indefinidamente segun el número de
+    árticulos, cada CASILLA DEL GRID
+    , tentra un 
+    tamaño de 24*24rem*/
+    grid-template-columns: repeat(auto-fill, 24rem);
+
+    /*Espacio entre las CASILLAS DEL GRID*/
+    gap: 2.6rem;
+
+    /*Centramos el contenido horizontalmente*/
+    place-content: center;
+
+    margin-top: calc(2rem + 6rem);
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 640px){
+    .ProductList .cards-container {
+        grid-template-columns: repeat(auto-fill, 14rem);
+    }
+
+}

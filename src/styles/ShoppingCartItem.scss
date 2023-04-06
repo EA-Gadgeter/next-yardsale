@@ -1,0 +1,37 @@
+@use "./vars";
+
+/*Es cada uno de los productos de la orden*/
+.ShoppingCartItem {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 1.6rem;
+    margin-bottom: 2.4rem;
+
+    /*Centramos los elementos de manera vertical,se nota mucho más en el nombre del artíuclo y y su precio*/
+    align-items: center;
+}
+
+.ShoppingCartItem figure {
+    margin: 0;
+}
+
+.ShoppingCartItem figure img{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 2rem;
+
+    /*Para evitar que la imagen se vea estirada o pixelada*/
+    object-fit: cover;
+}
+
+/*El segundo hijo que DEBE ser p*/
+.ShoppingCartItem p:nth-child(2) {
+    color: var(--very-light-pink);
+    font-size: var(--small-font);
+}
+
+/*El tercer hijo que DEBE ser p*/
+.ShoppingCartItem p:nth-child(3) {
+    font-size: var(--med-font);
+    font-weight: bold;
+}

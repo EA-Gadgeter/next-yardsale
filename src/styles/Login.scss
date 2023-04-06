@@ -1,0 +1,94 @@
+@use "./vars";
+
+.Login {
+    width: 100%;
+    height: calc(100vh - 6.1rem);
+    display: grid;
+    place-items: center;
+}
+
+.Login .login-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 30rem;
+}
+
+.Login .login-container .logo {
+    width: 15rem;
+    margin-bottom: 4.8rem;
+    justify-self: center;
+    display: none;
+}
+
+.Login .login-container .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Login .login-container .label {
+    color: var(--black);
+    font-size: var(--small-font);
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+.Login .login-container .input{
+    background-color: var(--text-input-field);
+    border: none;
+    color: var(--black);
+    font-size: var(--small-font);
+    font-family: 'Quicksand', sans-serif;
+    height: 3rem;
+    padding: 0.6rem;
+    margin-bottom: 1.2rem;
+    border-radius: 0.8rem;
+}
+
+.Login .login-container .input-email {
+    margin-bottom: 2.2rem;
+}
+
+.Login .login-container .login-button {
+    background-color: var(--hospital-green);
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--white);
+    font-size: var(--small-font);
+    font-weight: bold;
+    border-radius: 0.8rem;
+    height: 5rem;
+    margin-top: 1.4rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+.Login .login-container .form a {
+    text-align: center;
+    font-size: var(--small-font);
+    color: var(--hospital-green);
+    text-decoration: none;
+    margin-bottom: 5.2rem;
+}
+
+.Login .login-container .primary-button {
+    background-color: var(--white);
+    border: 0.1rem solid var(--hospital-green);
+    font-family: 'Quicksand', sans-serif;
+    color: var(--hospital-green);
+    font-size: var(--small-font);
+    font-weight: bold;
+    border-radius: 0.8rem;
+    width: inherit;
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+
+    .Login .login-container .logo {
+        display: block;
+    }
+}

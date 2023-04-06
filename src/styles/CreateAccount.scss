@@ -1,0 +1,87 @@
+@import 'vars';
+
+.CreateAccount {
+	width: 100%;
+	height: calc(100vh - 6.1rem);
+	display: grid;
+	place-items: center;
+}
+
+.CreateAccount-container {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	width: 300px;
+}
+
+.CreateAccount .logo {
+	width: 150px;
+	margin-bottom: 48px;
+	justify-self: center;
+	display: none;
+}
+
+.CreateAccount .title {
+	font-size: var(--large-font);
+	margin-bottom: 36px;
+	text-align: start;
+}
+
+.CreateAccount .form {
+	display: flex;
+	flex-direction: column;
+}
+
+.CreateAccount .form div {
+	display: flex;
+	flex-direction: column;
+}
+
+.CreateAccount .label {
+	font-size: var(--small-font);
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+.CreateAccount .input {
+	background-color: var(--text-input-field);
+	border: none;
+	border-radius: 8px;
+	height: 30px;
+	font-size: var(--med-font);
+	padding: 6px;
+	margin-bottom: 12px;
+}
+
+.CreateAccount .input-name,
+.CreateAccount .input-email,
+.CreateAccount .input-password {
+	margin-bottom: 22px;
+}
+
+.CreateAccount .primary-button {
+	background-color: var(--hospital-green);
+	border-radius: 8px;
+	border: none;
+	color: var(--white);
+	width: 100%;
+	cursor: pointer;
+	font-size: var(--med-font);
+	font-weight: bold;
+	height: 50px;
+}
+
+.CreateAccount .login-button {
+	margin-top: 14px;
+	margin-bottom: 30px;
+}
+
+@media (max-width: 640px) {
+	.CreateAccount .form-container {
+		height: 100%;
+	}
+
+	.CreateAccount .form {
+		height: 100%;
+		justify-content: space-between;
+	}
+}
