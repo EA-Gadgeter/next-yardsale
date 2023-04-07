@@ -1,5 +1,8 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState, useContext } from 'react';
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
 
 import AppContext from '@context/AppContext';
 
@@ -46,29 +49,30 @@ const Header = () => {
         <Image src={menu} alt="menu-icon" className={styles.menu} onClick={handleToggleMenuMobile} />
 
         <div className={styles['nav-bar-left']}>
-          <Image width={150} src={logo} alt="logo" className={styles.logo} />
-
+          <Link href="/">
+            <Image width={150} src={logo} alt="logo" className={styles.logo} />
+          </Link>
           {/*Dividimos la barra en 2 partes, la deºrecha y la izquierda
                 usamos una lista y a ya que recordemos que nos llevaran a
                 otras paginas*/}
           <ul>
             <li>
-              <a href="#">All</a>
+              <Link href="/">All</Link>
             </li>
             <li>
-              <a href="#">Clothes</a>
+              <Link href="/">Clothes</Link>
             </li>
             <li>
-              <a href="#">Electronics</a>
+              <Link href="/">Electronics</Link>
             </li>
             <li>
-              <a href="#">Furniture</a>
+              <Link href="/">Furniture</Link>
             </li>
             <li>
-              <a href="#">Toys</a>
+              <Link href="/">Toys</Link>
             </li>
             <li>
-              <a href="#">Others</a>
+              <Link href="/">Others</Link>
             </li>
           </ul>
         </div>

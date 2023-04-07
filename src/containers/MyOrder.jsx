@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import AppContext from '@context/AppContext';
 
@@ -44,7 +45,9 @@ const MyOrder = ({ setToggleOrder }) => {
         </p>
         <p>${totalPrice()}</p>
       </div>
-      <button className={styles['primary-button']}>Checkout</button>
+      <Link className={styles['primary-button']} href="/checkout">
+        Checkout
+      </Link>
     </aside>
   );
 };

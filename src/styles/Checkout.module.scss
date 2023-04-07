@@ -1,4 +1,4 @@
-@use "./vars";
+@use "vars";
 
 .Checkout {
     width: 100%;
@@ -8,7 +8,7 @@
 }
 
 .Checkout .title {
-    font-size: var(--large-font);
+    font-size: vars.$large-font;
     margin-bottom: 4rem;
 }
 
@@ -36,7 +36,7 @@
     /*Centramos los elementos verticalmente, se nota principalmente en el precio ttal*/
     align-items: center;
     
-    background-color: var(--text-input-field);
+    background-color: vars.$text-input-field;
     margin-bottom: 2.5rem;
     border-radius: 0.8rem;
     padding: 0 2.4rem;
@@ -52,20 +52,20 @@
 /*Dentro de las etiqueta p, el primer hijo que DEBE ser span
 la fecha de compra de la orden*/
 .Checkout .order p span:first-child {
-    font-size: var(--med-font);
+    font-size: vars.$med-font;
     font-weight: bold;
 }
 
  /*Dentro de las etiqueta p, el hijo numero 2 que debe ser span*/
 .Checkout .order p span:nth-child(2) {
-    font-size: var(--small-font);
-    color: var(--very-light-pink);
+    font-size: vars.$small-font;
+    color: vars.$very-light-pink;
 }
 
 /*El hijo número 2 que DEBE ser p, que es el precio de la compra*/
 .Checkout .order p:nth-child(2){
     text-align: end;
-    font-size: var(--med-font);
+    font-size: vars.$med-font;
     font-weight: bold;
 }
 
@@ -95,12 +95,12 @@ la fecha de compra de la orden*/
 
 /*El segundo hijo que DEBE ser p*/
 .Checkout .shopping-cart p:nth-child(2) {
-    color: var(--very-light-pink);
-    font-size: var(--small-font);
+    color: vars.$very-light-pink;
+    font-size: vars.$small-font;
 }
 
 /*El tercer hijo que DEBE ser p*/
 .Checkout .shopping-cart p:nth-child(3) {
-    font-size: var(--med-font);
+    font-size: vars.$med-font;
     font-weight: bold;
 }

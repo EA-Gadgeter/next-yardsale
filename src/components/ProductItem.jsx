@@ -1,3 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useContext, useState, useEffect } from 'react';
 import Image from 'next/image';
 
@@ -19,6 +22,7 @@ const ProductItem = ({ product }) => {
   useEffect(() => {
     const founded = cart.find((cartItem) => cartItem.id === product.id);
     setAdded(founded ? true : false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart]);
 
   const handleClick = (newProduct) => {

@@ -7,18 +7,18 @@ import useInitialState from '../hooks/useInitialState';
 
 import Layout from '../containers/Layout';
 
-import Login from '../pages/Login';
-import SendEmail from '../pages/SendEmail';
-import MyAccount from '../pages/MyAccount';
+import Login from '../pages/login';
+import SendEmail from '../pages/send-email';
+import MyAccount from '../pages/my-account';
 import Home from '../pages/Home';
-import NotFound from '../pages/NotFound';
-import NewPassword from '../pages/NewPassword';
+import NotFound from '../pages/not-found';
+import NewPassword from '../pages/new-password';
 import Checkout from '../pages/Checkout';
-import Orders from '../pages/Orders';
-import PasswordRecovery from '../pages/PasswordRecovery';
+import Orders from '../pages/orders';
+import PasswordRecovery from '../pages/password-recovery';
 
 import '../styles/global.css';
-import CreateAccount from '../pages/CreateAccount';
+import CreateAccount from '../pages/create-account';
 
 const App = () => {
   const initialState = useInitialState();

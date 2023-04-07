@@ -23,14 +23,14 @@
 
 .SendEmail .title {
     text-align: center;
-    font-size: var(--large-font);
+    font-size: vars.$large-font;
     margin-bottom: 1.2rem;
 }
 
 .SendEmail .subtitle {
     text-align: center;
-    font-size: var(--large-font);
-    color: var(--black);
+    font-size: vars.$large-font;
+    color: vars.$black;
     margin-top: 0;
     margin-bottom: 3rem;
 }
@@ -39,7 +39,7 @@
     width: 13.2rem;
     height: 13.2rem;
     border-radius: 50%;
-    background-color: var(--text-input-field);
+    background-color: vars.$text-input-field;
     display: flex;
     justify-content: center;
     /*Tambien modifica el tamaño de la imagen para ajustarse*/
@@ -52,11 +52,11 @@
 }
 
 .SendEmail .primary-button {
-    background-color: var(--hospital-green);
+    background-color: vars.$hospital-green;
     border: none;
     font-family: 'Quicksand', sans-serif;
-    font-size: var(--small-font);
-    color: var(--white);
+    font-size: vars.$small-font;
+    color: vars.$white;
     width: 100%;
     height: 5rem;
     border-radius: 0.8rem;
@@ -67,13 +67,13 @@
 }
 
 .SendEmail footer span {
-    font-size: var(--small-font);
+    font-size: vars.$small-font;
     margin-right: 0.5rem;
 }
 
 .SendEmail footer a {
-    font-size: var(--small-font);
-    color: var(--hospital-green);
+    font-size: vars.$small-font;
+    color: vars.$hospital-green;
     margin-top: 1.4rem;
 }
 

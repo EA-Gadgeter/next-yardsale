@@ -1,4 +1,5 @@
 import Header from '@components/Header';
+import Head from 'next/head';
 
 import AppContext from '@context/AppContext';
 import useInitialState from '@hooks/useInitialState';
@@ -9,10 +10,15 @@ function MyApp({ Component, pageProps }) {
   const initialState = useInitialState();
 
   return (
-    <AppContext.Provider value={initialState}>
-      <Header />
-      <Component {...pageProps} />
-    </AppContext.Provider>
+    <>
+      <Head>
+        <title>Next YardSale</title>
+      </Head>
+      <AppContext.Provider value={initialState}>
+        <Header />
+        <Component {...pageProps} />
+      </AppContext.Provider>
+    </>
   );
 }
 

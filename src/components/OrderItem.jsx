@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useContext } from 'react';
 import Image from 'next/image';
 
@@ -10,17 +11,19 @@ import styles from '@styles/OrderItem.module.scss';
 const OrderItem = ({ product }) => {
   const { removeFromCart } = useContext(AppContext);
 
+  console.log(product?.images[0]);
+
   const handleClick = () => {
-    removeFromCart(product.id);
+    removeFromCart(product?.id);
   };
 
   return (
     <div className={styles.OrderItem}>
       <figure>
-        <img src={product.images[0]} alt={product.title} />
+        <img src={product?.images[0]} alt={product?.title} />
       </figure>
-      <p>{product.title}</p>
-      <p>${product.price}</p>
+      <p>{product?.title}</p>
+      <p>${product?.price}</p>
       <Image src={iconClose} alt="quit-product" onClick={handleClick} />
     </div>
   );

@@ -97,6 +97,9 @@ la fecha de compra de la orden*/
 }
 
 .MyOrder .primary-button {
+    display: grid;
+    place-content: center;
+    text-decoration: none;
     background-color: vars.$hospital-green;
     border-radius: 0.8rem;
     border: none;

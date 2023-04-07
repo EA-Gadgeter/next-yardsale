@@ -1,4 +1,4 @@
-@use "./vars";
+@use "vars";
 
 .Orders {
     width: 100%;
@@ -21,7 +21,7 @@
 }
 
 .Orders .title {
-    font-size: var(--large-font);
+    font-size: vars.$large-font;
     font-weight: bold;
     margin-bottom: 4rem;
 }

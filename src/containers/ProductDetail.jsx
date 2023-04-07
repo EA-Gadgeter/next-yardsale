@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import ProductInfo from "../components/ProductInfo";
 
@@ -10,7 +11,7 @@ const ProductDetail = () => {
   return (
     <aside className="ProductDetail">
         <div className="product-detailed-close">
-            <img src={iconClose} alt="close" />
+            <Image src={iconClose} alt="close" />
             <ProductInfo />
         </div>
     </aside>

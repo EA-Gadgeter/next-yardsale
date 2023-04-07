@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import "@styles/Order.scss";
 
@@ -13,10 +14,10 @@ const Order = () => {
         </p>
         <p>
             $560.00
-            <img src={flechita} alt="" />
+            <Image src={flechita} alt="" />
         </p>
     </div>
-  )
-}
+  );
+};
 
 export default Order;
